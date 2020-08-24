@@ -171,10 +171,8 @@ p {
 
 .fact-detail {
   min-width: 450px;
-  position: relative;
   min-height: 400px;
-  max-height: 1000px;
-  background: rgba(255, 255, 255, 0.632);
+  background: rgba(255, 255, 255, 0.666);
   margin: 10px;
   border-radius: 20px;
   overflow: hidden;
@@ -185,10 +183,7 @@ p {
 }
 
 .container .fact-detail .content {
-  position: absolute;
-  top: 75px;
-  padding: 20px;
-  text-align: center;
+  padding: 10%;
 }
 
 .container .fact-detail .content h5 {
