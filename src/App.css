@@ -1,38 +1,199 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  min-height: 100vh;
+  background: linear-gradient(90deg, peachpuff, #d060f9);
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-image: url("./images/cat.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 15px 25px 25px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  text-align: center;
+  padding: 10%;
+  font-size: 130px;
+  color: rgb(240, 151, 151);
+  font-weight: 900;
+}
+
+.sub-title {
+  text-align: center;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 62px;
+  padding: 5%;
+}
+
+.link-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-link {
+  font-weight: 900;
+  text-decoration: none;
+  font-size: 26px;
+  color: hotpink;
+  font-style: italic;
+}
+.home-link:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container {
+  position: relative;
+  width: 450px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container .card {
+  position: relative;
+  width: 280px;
+  height: 400px;
+  /* background: rgba(255, 255, 255, 0.632); */
+  background: white;
+  margin: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 25px 25px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+
+.container:hover .card {
+  transform: scale(0.9);
+  opacity: 0.9;
+}
+.container .card:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.container .card .circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgb(28, 28, 28);
+
+  clip-path: circle(180px at center 0);
+  text-align: center;
+}
+
+.container .card .circle h2 {
   color: white;
+  font-size: 4.5rem;
+  padding: 35px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.container .card .content {
+  position: absolute;
+  bottom: 65px;
+  padding: 20px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .card .content h5 {
+  color: rgb(31, 31, 31);
+  text-align: center;
+  padding: 0 10px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+p {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #d060f9, peachpuff);
+  border-radius: 40px;
+  width: 125px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  align-self: center;
+  margin-bottom: 30px;
+  transition: ease-in-out 0.5s;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.link:hover {
+  text-decoration: none;
+  background: linear-gradient(45deg, peachpuff, #d060f9);
+  color: black;
+  transition: linear 0.3s;
+}
+
+.fact-detail {
+  min-width: 450px;
+  position: relative;
+  min-height: 400px;
+  max-height: 1000px;
+  background: rgba(255, 255, 255, 0.632);
+  margin: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 25px 25px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  margin-bottom: 20%;
+  margin-top: -30px;
+}
+
+.container .fact-detail .content {
+  position: absolute;
+  top: 75px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container .fact-detail .content h5 {
+  color: rgb(31, 31, 31);
+  text-align: center;
+  padding: 0 10px;
+  font-size: 22px;
 }
